@@ -84,6 +84,8 @@ app = FastAPI()
 scholar_scraper = ScholarScraper()
 
 
+
+
 @app.get("/get_paper/{user_id}")
 def get_paper(user_id: str, limit: int = None):
   papers = scholar_scraper.get_scholar_papers(user_id, limit)
