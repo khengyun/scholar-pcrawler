@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 from fastapi import FastAPI
 import time
+
 app = FastAPI()
 
 def get_scholar_papers(user_id, limit=None):
@@ -24,7 +25,7 @@ def get_scholar_papers(user_id, limit=None):
         soup = BeautifulSoup(response.text, 'html.parser')
         papers = []
 
-        # Tìm tất cả các phần tử HTML chứa thông tin về bài báo
+        # Find all HTML elements containing information about papers
         paper_elements = soup.find_all('tr', {'class': 'gsc_a_tr'})
 
         for i, paper_element in enumerate(paper_elements):
@@ -34,15 +35,25 @@ def get_scholar_papers(user_id, limit=None):
             title_element = paper_element.find('a', {'class': 'gsc_a_at'})
             authors_element = paper_element.find('div', {'class': 'gs_gray'})
             citation_element = paper_element.find('a', {'class': 'gsc_a_ac'})
+            year_element = paper_element.find('span', {'class': 'gsc_a_h'})
 
             title = title_element.text.strip() if title_element else 'N/A'
             authors = authors_element.text.strip() if authors_element else 'N/A'
             citations = citation_element.text.strip() if citation_element else 'N/A'
+            year = year_element.text.strip() if year_element else 'N/A'
+
+            # Additional information
+            conference_element = paper_element.find('div', {'class': 'gs_gray'})
+            conference = conference_element.text.strip() if conference_element else 'N/A'
+            paper_url = title_element.get('href') if title_element else 'N/A'
 
             paper_info = {
                 'Title': title,
                 'Authors': authors,
-                'Citations': citations
+                'Citations': citations,
+                'Year': year,
+                'Conference': conference,
+                'Paper_URL': paper_url
             }
 
             papers.append(paper_info)
