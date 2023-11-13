@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 from fastapi import FastAPI
-
+import time
 app = FastAPI()
 
 def get_scholar_papers(user_id, limit=None):
@@ -62,7 +62,7 @@ def get_paper(user_id: str, limit: int = None):
 
 def main():
     import uvicorn
-    uvicorn.run(app, host="127.0.0.1", port=8000)
+    uvicorn.run(app, host="0.0.0.0", port=8000)
 
 if __name__ == "__main__":
     main()
