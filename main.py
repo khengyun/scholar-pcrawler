@@ -80,7 +80,28 @@ app = FastAPI(
     docs_url="/swagger",
     redoc_url="/redoc"
 )
+
 scholar_scraper = ScholarScraper()
+
+# Add a user guide to the root endpoint
+@app.get("/", tags=["Root"])
+def read_root():
+    """
+    Welcome to the Scholar Scraper API!
+
+    This API allows you to retrieve information about papers from Google Scholar.
+
+    To get started, you can use the Swagger UI at /swagger or ReDoc UI at /redoc
+    to explore and test the available endpoints.
+
+    For detailed documentation and examples, please refer to the documentation provided
+    in the Swagger UI or ReDoc UI.
+
+    If you have any questions or issues, feel free to contact us.
+
+    Enjoy using the Scholar Scraper API!
+    """
+    return {"message": "Welcome to the Scholar Scraper API!"}
 
 @app.get("/get_paper/{user_id}",
          tags=["Google Scholar"],
