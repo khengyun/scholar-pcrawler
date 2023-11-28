@@ -19,4 +19,4 @@ jobs:
         id: update_readme
         uses: khengyun/readme-scholar-activity@main
         with:
-          user-id: 'YpOO60MAAAAJ'
+          SCHOLAR_ID: 'YpOO60MAAAAJ'
