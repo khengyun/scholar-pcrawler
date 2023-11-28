@@ -15,6 +15,7 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+      - run: sudo git config --system --add safe.directory /github/workspace
       - name: update readme
         id: update_readme
         uses: khengyun/readme-scholar-activity@main
