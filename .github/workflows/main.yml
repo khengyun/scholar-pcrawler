@@ -19,7 +19,7 @@ jobs:
       - name: Set ownership
         run: |
           # this is to fix GIT not liking owner of the checkout dir
-          git config --add safe.directory *  --global
+          git config --global --add safe.directory /github/workspace
           
       - name: update readme
         id: update_readme
