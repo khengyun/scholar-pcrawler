@@ -10,7 +10,9 @@ jobs:
   update_scholar_readme:
     runs-on: ubuntu-latest
     name: Update Scholar README
-    permissions: write-all
+    permissions: 
+      contents: write
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
