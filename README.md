@@ -3,7 +3,7 @@ show scholar by scholar id
 
 
 <!-- SCHOLAR-LIST:START -->
-## 🧑‍🏫 Top 5 Publications
+## 🧑‍🏫 Top 3 Publications
 
 <table id="scholar-table" style="position: relative;">
   <tr>
@@ -31,19 +31,7 @@ show scholar by scholar id
     <td>2023</td>
   </tr>
   <tr>
-     <td><a  href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YpOO60MAAAAJ&citation_for_view=YpOO60MAAAAJ:qjMakFHDy7sC">An Improved Lane-Keeping Controller for Autonomous Vehicles Leveraging an Integrated CNN-LSTM Approach</a></td>
-    <td>TN Hoang, PP Hong, NN Vinh, NT Nguyen, KH Nguyen, LD Quach</td>
-    <td></td>
-    <td>2023</td>
-  </tr>
-  <tr>
-     <td><a  href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YpOO60MAAAAJ&citation_for_view=YpOO60MAAAAJ:d1gkVwhDpl0C">Lane Road Segmentation Based on Improved UNet Architecture for Autonomous Driving</a></td>
-    <td>TN Hoang, HVN Nguyen, KH Nguyen, LD Quach</td>
-    <td></td>
-    <td>2023</td>
-  </tr>
-  <tr>
-    <td align="center"   colspan="4" id="show-more-cell" style="text-align:center; font-size: larger; position: relative;" title="Last Updated: 2023-12-02 20:12:53 UTC">
+    <td align="center"   colspan="4" id="show-more-cell" style="text-align:center; font-size: larger; position: relative;" title="Last Updated: 2023-12-02 20:14:45 UTC">
 <em><a href="https://scholar.google.com/citations?user=YpOO60MAAAAJ&hl=en" style="display: inline-block;">Show more</a></em></td>
   </tr>
 </table>
