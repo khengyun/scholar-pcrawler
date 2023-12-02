@@ -24,3 +24,10 @@ jobs:
         uses: khengyun/readme-scholar-activity@main
         with:
           SCHOLAR_ID: 'YpOO60MAAAAJ'
+      - name: Commit changes
+        run: |
+          git commit -a -m "Add changes"
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          branch: ${{ github.head_ref }}
