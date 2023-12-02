@@ -12,6 +12,8 @@ jobs:
     name: Update Scholar README
     permissions:
       contents: write
+      actions: write
+      pages: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
